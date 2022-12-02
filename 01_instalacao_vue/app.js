@@ -1,8 +1,17 @@
 const MyNameApp = {
     data() {
         return {
-            language: "VueJs 3",
-            name: "Ricardo"
+            name: "",
+            input_language: ""
+        }
+    },
+    methods: {
+        handleSubmit(e) {
+            e.preventDefault();
+
+            console.log(this.input_name);
+
+            this.name = this.input_name;
         }
     }
 }
