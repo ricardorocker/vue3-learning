@@ -1,5 +1,8 @@
 <template>
-  <PrimeiroComponente />
+  <div>
+    <PrimeiroComponente />
+    <p>Teste em App.vue: {{ test }}</p>
+  </div>
 </template>
 
 <script>
@@ -9,6 +12,11 @@ export default {
   name: 'App',
   components: {
     PrimeiroComponente
+  },
+  data() {
+    return {
+      test: 'Testando...'
+    }
   }
 }
 </script>
