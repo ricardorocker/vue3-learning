@@ -9,19 +9,26 @@ export default {
     name: 'Life-cycle',
     data() {
         return {
-            name: "Ricardo"
+            name: "Amanda"
         }
     },
     created() {
         setTimeout(() => {
             this.name = "Petrucia"
         }, 1000);
+        this.testFunction();
 
     },
     mounted() {
         setTimeout(() => {
-            this.name = "Amanda"
+            this.name = "Ricardo"
         }, 2000);
+        this.testFunction();
+    },
+    methods: {
+        testFunction() {
+            console.log("Executed!");
+        }
     }
 }
 </script>

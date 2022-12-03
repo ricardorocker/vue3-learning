@@ -9,6 +9,7 @@
             <li>Python</li>
         </ul>
         <p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
+        <button @click="handleViewEmail">{{textEmailButton}}</button>
         <p>Para acessar meu portfólio basta <a v-bind:href="urlPortfolio" target="blank">clicar aqui</a></p>
         <Image />
     </div>
@@ -24,7 +25,15 @@ export default {
             isWorking: false,
             showEmail: true,
             email: 'ricardo.santos.rocker@gmail.com',
-            urlPortfolio: 'http://www.google.com.br/'
+            urlPortfolio: 'http://www.google.com.br/',
+            textEmailButton: 'Ocultar e-mail'
+        }
+    },
+    methods: {
+        handleViewEmail() {
+            this.showEmail = !this.showEmail
+
+            !this.showEmail ? this.textEmailButton = 'Mostrar email' : this.textEmailButton = 'Ocultar email'            
         }
     }
 }
