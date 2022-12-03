@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header :isLogin="true"></Header>
     <PrimeiroComponente />
     <p class="paragrafo-pai">Teste em App.vue: {{ test }}</p>
     <LifeCycle />
@@ -32,7 +32,7 @@ export default {
 
 <style>
   body {
-    background-color: #333;
+    background-color: rgb(185, 185, 185);
     color: white;
   }
 
