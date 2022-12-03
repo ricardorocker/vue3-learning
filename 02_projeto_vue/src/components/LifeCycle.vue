@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h1>Life Cycle</h1>
-        <p>Nome: {{ name }}</p>
+        <h1>Life Cycle: {{name}}</h1>      
     </div>
 </template>
 
