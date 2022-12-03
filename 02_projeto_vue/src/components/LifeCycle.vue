@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Life Cycle: {{name}}</h1>      
+        <h1>Life Cycle: {{cycle}}</h1>      
     </div>
 </template>
 
@@ -9,19 +9,19 @@ export default {
     name: 'Life-cycle',
     data() {
         return {
-            name: "Amanda"
+            cycle: "data"
         }
     },
     created() {
         setTimeout(() => {
-            this.name = "Petrucia"
+            this.cycle = "created"
         }, 1000);
         this.testFunction();
 
     },
     mounted() {
         setTimeout(() => {
-            this.name = "Ricardo"
+            this.cycle = "mounted"
         }, 2000);
         this.testFunction();
     },

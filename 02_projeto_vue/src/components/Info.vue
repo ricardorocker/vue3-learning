@@ -9,8 +9,9 @@
             <li>Python</li>
         </ul>
         <p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
-        <button @click="handleViewEmail">{{textEmailButton}}</button>
-        <p>Para acessar meu portfólio basta <a v-bind:href="urlPortfolio" target="blank">clicar aqui</a></p>
+        <button @click="handleViewEmail">{{ textEmailButton }}</button>
+        <p class="teste">Para acessar meu portfólio basta <a v-bind:href="urlPortfolio" target="blank">clicar aqui</a>
+        </p>
         <Image />
     </div>
 </template>
@@ -33,8 +34,14 @@ export default {
         handleViewEmail() {
             this.showEmail = !this.showEmail
 
-            !this.showEmail ? this.textEmailButton = 'Mostrar email' : this.textEmailButton = 'Ocultar email'            
+            !this.showEmail ? this.textEmailButton = 'Mostrar email' : this.textEmailButton = 'Ocultar email'
         }
     }
 }
 </script>
+
+<style>
+    .paragrafo-pai{
+        color: chocolate;
+    }
+</style>
