@@ -1,21 +1,30 @@
 <template>
   <div>
     <img :src="sourceImage" :alt="descriptionImage" style="max-width: 100px" />
-    <Reutilizacao />
+    <MudarImagem @mudar-imagem="changeImage" />
   </div>
 </template>
 
 <script>
-import Reutilizacao from "./Reutilizacao.vue";
+import MudarImagem from "./MudarImagem.vue";
 
 export default {
   name: "Image",
+  components: { MudarImagem },
   data() {
     return {
-      sourceImage: "/img/gorro.png",
+      sourceImage: "/img/tiny-img-01.png",
       descriptionImage: "Minha imagem!",
     };
   },
-  components: { Reutilizacao },
+  methods: {
+    changeImage() {
+      if (this.sourceImage == "/img/tiny-img-01.png") {
+        this.sourceImage = "/img/tiny-img-02.png";
+      } else {
+        this.sourceImage = "/img/tiny-img-01.png";
+      }
+    },
+  },
 };
 </script>

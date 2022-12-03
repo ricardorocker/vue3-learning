@@ -6,8 +6,8 @@
             <Input />
             <Input />
         -->
-      <input type="text" v-model="name" />
-      <input type="text" v-model="email" />
+      <input type="text" v-model="name" placeholder="Digite seu nome" />
+      <input type="text" v-model="email" placeholder="Digite seu email" />
       <Submit />
     </form>
   </div>
@@ -22,24 +22,24 @@ export default {
   components: { Input, Submit },
   data() {
     return {
-        name: '',
-        email: ''
-    }
+      name: "",
+      email: "",
+    };
   },
   methods: {
     handleSubmit(e) {
-        e.preventDefault();
+      e.preventDefault();
 
-        const name = this.name;
-        const email = this.email
+      const name = this.name;
+      const email = this.email;
 
-        console.log(`O nome é: "${name}" e o email é: "${email}"`);
+      console.log(`O nome é: "${name}" e o email é: "${email}"`);
 
-        // Ajax
+      // Ajax
 
-        // Inserir no banco de dados
-    }
-  }
+      // Inserir no banco de dados
+    },
+  },
 };
 </script>
 

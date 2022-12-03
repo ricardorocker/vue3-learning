@@ -32,7 +32,7 @@ export default {
 
 <style>
   body {
-    background-color: #333;
+    background-color: rgb(185, 185, 185);
     color: white;
   }
 
