@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- EVENT -->
+        <form v-on:click="handleSubmit">
+            Evento:
+            <input type="text" v-model="input_name" placeholder="Insira o nome...">
+            <button type="submit">Enviar</button>
+        </form>
+        <!-- DATA BINDING -->
+        <p>
+            Data Binding:
+            <input type="text" v-model="input_language" placeholder="Insira a linguagem...">
+        </p>
+        <p>Olá, meu nome é: {{name}}</p>
+        <p>Estou aprendendo: {{input_language}}</p>
+    </div>
+</body>
+
+</html>
