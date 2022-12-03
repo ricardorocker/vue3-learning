@@ -2,11 +2,13 @@
     <div>
         <p v-if="isWorking">Estou trabalhando no momento</p>
         <p v-else>Estou em busca de novas oportunidades!</p>
-        <p>Utilizo as seguintes tecnologias:</p>
+        <p>Utilizo as seguintes tecnologias Front-End:</p>
         <ul>
-            <li>Javascript</li>
-            <li>PHP</li>
-            <li>Python</li>
+            <li v-for="language in frontLanguages" v-bind:key="language.id">{{ language.name }}</li>
+        </ul>
+        <p>Utilizo as seguintes tecnologias Back-End:</p>
+        <ul>
+            <li v-for="(language, index) in backLanguages" :key="index">{{ language }}</li>
         </ul>
         <p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
         <button @click="handleViewEmail">{{ textEmailButton }}</button>
@@ -27,7 +29,22 @@ export default {
             showEmail: true,
             email: 'ricardo.santos.rocker@gmail.com',
             urlPortfolio: 'http://www.google.com.br/',
-            textEmailButton: 'Ocultar e-mail'
+            textEmailButton: 'Ocultar e-mail',
+            frontLanguages: [
+                {
+                    id: 1,
+                    name: 'Javascript'
+                },
+                {
+                    id: 2,
+                    name: 'Angular'
+                },
+                {
+                    id: 3,
+                    name: 'React'
+                }
+            ],
+            backLanguages: ['Python', 'Java', 'PHP']
         }
     },
     methods: {
@@ -41,7 +58,7 @@ export default {
 </script>
 
 <style>
-    .paragrafo-pai{
-        color: chocolate;
-    }
+.paragrafo-pai {
+    color: chocolate;
+}
 </style>
