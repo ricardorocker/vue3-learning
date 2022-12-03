@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header :isLogin="true"></Header>
     <PrimeiroComponente />
     <p class="paragrafo-pai">Teste em App.vue: {{ test }}</p>
     <LifeCycle />

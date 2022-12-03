@@ -3,12 +3,16 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Projetos</a></li>
         <li><a href="#">Contato</a></li>
+        <li v-show="isLogin"><a href="#">Meu Perfil</a></li>
     </ul>
 </template>
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    props: {
+        isLogin: true
+    }
 }
 </script>
 
